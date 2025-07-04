@@ -1,5 +1,8 @@
 package screens;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -48,6 +51,13 @@ public class VentanaPrincipal extends JFrame {
         //Elemntos de menu : Insertar carrera
         jMenuItemInsertarCarreras = new JMenuItem();
         jMenuItemInsertarCarreras.setText("Insertar...");
+        jMenuItemInsertarCarreras.addActionListener( new ActionListener() {
+            public void actionPerformed(ActionEvent event){
+                jmiInsertarCarrera(event);
+                
+            }
+        });
+
 
 
         //Agregar menuItem a menu 
